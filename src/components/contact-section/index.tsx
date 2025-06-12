@@ -36,7 +36,7 @@ export default function ContactSection() {
                     <Linkedin className="w-5 h-5" /> LinkedIn
                 </a>
                 <a
-                    href="https://github.com/seuusuario"
+                    href="https://github.com/murilocarmo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:underline"
