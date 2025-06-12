@@ -64,10 +64,10 @@ export default function Navbar() {
 
                 {/* Social icons */}
                 <div className="hidden md:flex space-x-4">
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/murilocarmo" target="_blank" rel="noopener noreferrer">
                         <GithubIcon className="w-8 h-8 hover:text-primary transition" />
                     </a>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/murilo-henrique-a8a747110/" target="_blank" rel="noopener noreferrer">
                         <LinkedinIcon className="w-8 h-8 hover:text-primary transition" />
                     </a>
                 </div>
@@ -119,13 +119,10 @@ export default function Navbar() {
                             </a>
 
                             <div className="flex justify-center space-x-4 pt-2">
-                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/murilocarmo" target="_blank" rel="noopener noreferrer">
                                     <Image src="/ui/github.svg" alt="GitHub" width={24} height={24} />
                                 </a>
-                                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                                    <Image src="/ui/twitter.svg" alt="Twitter" width={24} height={24} />
-                                </a>
-                                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/murilo-henrique-a8a747110/" target="_blank" rel="noopener noreferrer">
                                     <Image src="/ui/linkedin.svg" alt="LinkedIn" width={24} height={24} />
                                 </a>
                             </div>

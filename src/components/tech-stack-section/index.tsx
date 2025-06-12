@@ -19,7 +19,7 @@ export default function TechStack() {
     return (
         <section
             id="techstack"
-            className="pb-20 px-6 md:px-40 text-center md:flex md:flex-col md:justify-center"
+            className="pb-20 px-6 text-center md:flex md:flex-col md:justify-center"
         >
             <h2 className="text-2xl md:text-3xl font-bold mb-2">Conjunto de Tecnologias</h2>
             <p className="text-muted-foreground mb-10">

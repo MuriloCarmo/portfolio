@@ -5,7 +5,10 @@ import { projects } from "@/data/project-data";
 
 export default function FeaturedProjectsSection() {
     return (
-        <section id="projects" className="flex flex-col px-[10%] py-[5%] text-left">
+        <section
+            id="projects"
+            className="flex flex-col px-[10%] py-[5%] text-left md:px-[10rem]"
+        >
             <h1 className="text-3xl md:text-4xl font-bold mb-12">Projetos em Destaque</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
