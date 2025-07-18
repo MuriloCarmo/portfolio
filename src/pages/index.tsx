@@ -22,7 +22,7 @@ export default function Home() {
 }
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-    const messages = await import(`../../public/locales/${locale}/navbar.json`);
+    const messages = await import(`../../public/locales/${locale}/index.json`);
     return {
         props: {
             messages: messages.default,

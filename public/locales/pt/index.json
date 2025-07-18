@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "greeting": "Olá",
+    "intro": "eu sou",
+    "description": "Desenvolvedor web que transforma ideias em sites rápidos, modernos e funcionais.",
+    "experience": "Com mais de 8 anos de experiência, ajudo empresas e profissionais a lançarem seus projetos com qualidade, performance e design moderno.",
+    "cta": "Fale comigo no WhatsApp"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre",
+    "techstack": "Tecnologias",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "whatsapp": "Fale comigo no WhatsApp"
+  }
+}

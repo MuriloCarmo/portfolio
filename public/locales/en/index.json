@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "greeting": "Hello",
+    "intro": "I’m",
+    "description": "Web developer who turns ideas into fast, modern, and functional websites.",
+    "experience": "With over 8 years of experience, I help companies and professionals launch their projects with quality, performance, and modern design.",
+    "cta": "Chat with me on WhatsApp"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "techstack": "Tech Stack",
+    "projects": "Projects",
+    "contact": "Contact",
+    "whatsapp": "Chat with me on WhatsApp"
+  }
+}

@@ -1,23 +1,21 @@
-import Image from "next/image";
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function HeroSection() {
+    const t = useTranslations('hero');
+
     return (
-        <section
-            id="hero"
-            className="flex flex-col md:flex-row items-center justify-between px-6 md:px-40 py-20 md:py-32 gap-10"
-        >
-            {/* Texto à esquerda */}
+        <section id="hero" className="flex flex-col md:flex-row items-center justify-between px-6 md:px-40 py-20 md:py-32 gap-10">
             <div className="text-center md:text-left max-w-xl md:max-w-2xl w-full">
                 <h1 className="text-[1.875rem] leading-tight md:text-[2.5rem] font-bold">
-                    Olá 👋, eu sou{" "}
+                    {t('greeting')} 👋, {t('intro')}{" "}
                     <span className="text-gradient bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-transparent bg-clip-text">
                         Murilo Henrique
                     </span>
                     <br />
-                    Desenvolvedor web que transforma ideias em sites rápidos, modernos e funcionais.
+                    {t('description')}
                 </h1>
 
-                {/* Avatar para mobile centralizado */}
                 <div className="md:hidden my-10">
                     <div className="relative w-36 h-36 mx-auto rounded-full p-[2px] bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd">
                         <Image
@@ -32,8 +30,7 @@ export default function HeroSection() {
                 </div>
 
                 <p className="text-gray-400 text-base md:text-lg">
-                    Com mais de 8 anos de experiência, ajudo empresas e profissionais a lançarem
-                    seus projetos com qualidade, performance e design moderno.
+                    {t('experience')}
                 </p>
 
                 <div className="mt-8 flex justify-center md:justify-start">
@@ -49,11 +46,10 @@ export default function HeroSection() {
                             width={24}
                             height={24}
                         />
-                        Fale comigo no WhatsApp
+                        {t('cta')}
                     </a>
                 </div>
             </div>
-
 
             <div className="hidden md:block relative w-36 h-36 md:w-52 md:h-52 shrink-0 rounded-full p-[3px] bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd">
                 <div className="relative w-full h-full rounded-full overflow-hidden">

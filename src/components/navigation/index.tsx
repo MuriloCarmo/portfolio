@@ -11,7 +11,7 @@ import LanguageSwitcher from "@/components/language-switcher";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState<string>('hero');
-    const t = useTranslations();
+    const t = useTranslations('navbar');
 
     const navigation = [
         { name: t('home'), href: '#hero', id: 'hero' },
@@ -63,12 +63,15 @@ export default function Navbar() {
 
                 <div className="hidden md:flex space-x-4">
                     <a href="https://github.com/murilocarmo" target="_blank" rel="noopener noreferrer">
-                        <GithubIcon className="w-8 h-8 hover:text-primary transition" />
+                        <GithubIcon className="w-8 h-8 hover:text-primary transition"/>
                     </a>
-                    <a href="https://www.linkedin.com/in/murilo-henrique-a8a747110/" target="_blank" rel="noopener noreferrer">
-                        <LinkedinIcon className="w-8 h-8 hover:text-primary transition" />
+                    <a href="https://www.linkedin.com/in/murilo-henrique-a8a747110/" target="_blank"
+                       rel="noopener noreferrer">
+                        <LinkedinIcon className="w-8 h-8 hover:text-primary transition"/>
                     </a>
-                    <LanguageSwitcher />
+                    <div className="flex justify-center items-center">
+                        <LanguageSwitcher/>
+                    </div>
                 </div>
 
                 <button className="md:hidden" onClick={() => setIsOpen(true)}>
@@ -111,9 +114,12 @@ export default function Navbar() {
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-white font-medium py-3 rounded-md transition hover:brightness-110"
                             >
-                                <Image src="/ui/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+                                <Image src="/ui/whatsapp.svg" alt="WhatsApp" width={20} height={20}/>
                                 {t('whatsapp')}
                             </a>
+                            <div className="flex justify-center gap-4 pt-4">
+                                <LanguageSwitcher/>
+                            </div>
                         </div>
                     </div>
                 </>
