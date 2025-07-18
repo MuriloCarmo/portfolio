@@ -1,6 +1,17 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import {IntlProvider} from 'next-intl';
+import type {AppProps} from 'next/app';
+import {useRouter} from 'next/router';
+import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({Component, pageProps}: AppProps) {
+    const {locale = 'pt'} = useRouter();
+    const messages = pageProps.messages;
+
+    return (
+        <IntlProvider locale={locale} messages={messages}>
+            <Component {...pageProps} />
+        </IntlProvider>
+    );
 }
+
+export default MyApp;

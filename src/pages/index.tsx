@@ -4,18 +4,28 @@ import TechStack from "@/components/tech-stack-section";
 import FeaturedProjectsSection from "@/components/featured-project-section";
 import AboutSection from "@/components/about-section";
 import ContactSection from "@/components/contact-section";
+import { GetStaticPropsContext } from "next";
 
 export default function Home() {
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <main className="flex flex-col bg-dark-background text-dark-foreground">
-                <HeroSection/>
+                <HeroSection />
                 <AboutSection />
-                <TechStack/>
-                <FeaturedProjectsSection/>
+                <TechStack />
+                <FeaturedProjectsSection />
                 <ContactSection />
             </main>
         </>
     );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+    const messages = await import(`../../public/locales/${locale}/navbar.json`);
+    return {
+        props: {
+            messages: messages.default,
+        },
+    };
 }
