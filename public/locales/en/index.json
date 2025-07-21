@@ -13,5 +13,102 @@
     "projects": "Projects",
     "contact": "Contact",
     "whatsapp": "Chat with me on WhatsApp"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Developer with 8 years of experience in building high-impact digital solutions. My passion is transforming ideas into modern, intuitive, and functional interfaces that connect people and businesses.",
+    "experienceTitle": "Professional Experience",
+    "experience": [
+      {
+        "role": "Senior Developer",
+        "company": "Work in Progress",
+        "location": "Remote",
+        "type": "Full Time",
+        "period": "2025 – Present",
+        "description": "Responsible for the complete migration of the CMS from the Hygraph (GraphCMS) platform to Sanity, restructuring the entire content architecture and refactoring the front-end in Next.js to ensure performance, scalability, and ease of maintenance."
+      },
+      {
+        "role": "Senior Front-End Developer",
+        "company": "Digital Code By Dentsu",
+        "location": "Remote",
+        "type": "Full Time",
+        "period": "2022 – 2024",
+        "description": "Development of front-end solutions for the Stellantis Group, focusing on optimized and high-performance components using NextJS, SEO, and DataLayer."
+      },
+      {
+        "role": "Mid-Level Front-End Developer",
+        "company": "Gesthor Hospitalar",
+        "location": "Goiânia, GO",
+        "type": "Full Time",
+        "period": "2021 – 2022",
+        "description": "Worked as a Full Stack developer, creating modern interfaces in ReactJS with NodeJS API, Context API, and Styled Components."
+      }
+    ],
+    "educationTitle": "Education",
+    "education": {
+      "degree": "Systems Analysis and Development",
+      "institution": "Estácio University",
+      "location": "Goiânia, GO",
+      "type": "In-person",
+      "period": "2019 – 2021"
+    },
+    "languagesTitle": "Languages",
+    "languages": [
+      "Portuguese - Fluent",
+      "English - Advanced",
+      "Spanish - Intermediate"
+    ]
+  },
+  "techstack": {
+    "title": "Tech Stack",
+    "description": "Tools I’ve been using frequently"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "title": "Landing Page – Jeep Renegade",
+        "description": "Creation of a highly optimized landing page for Jeep Renegade, prioritizing SEO, responsiveness, and tracking via Google Tag Manager. The project used reusable components and efficient media loading.",
+        "previewLink": "https://www.jeep.com.br/renegade/",
+        "image": "/projects/jeep-renegade.jpg"
+      },
+      {
+        "title": "Landing Page – Jeep Compass",
+        "description": "Development of the official Jeep Compass landing page, focusing on performance, SEO, and responsiveness. Features include image optimization, smart loading, accessible code, and integration with Google Tag Manager (DataLayer).",
+        "previewLink": "https://www.jeep.com.br/compass/",
+        "image": "/projects/jeep-compass.jpg"
+      },
+      {
+        "title": "Landing Page – Fiat Titano",
+        "description": "Development of the official landing page for the Fiat Titano model, focused on performance, responsiveness, and SEO. Features include lazy loading, image compression, semantic structure, and Google Tag Manager (DataLayer) integration for metrics analysis.",
+        "previewLink": "https://titano.fiat.com.br",
+        "image": "/projects/fiat-titano.jpg"
+      },
+      {
+        "title": "Sales and Financial Dashboard (Preview Unavailable)",
+        "description": "Complete development of an admin panel for managing sales, withdrawals, and advances. The project includes 2FA authentication, advanced filters, dynamic charts, financial reports, and permission control. Modern and responsive interface focused on performance and user experience.",
+        "image": "/projects/reflowapp.jpg"
+      },
+      {
+        "title": "CMS for Peugeot Casacor Event",
+        "description": "Led the development of a complete CMS for a Peugeot event. Built a robust API with authentication, protected routes, content management, and media uploads.",
+        "previewLink": "https://carros.peugeot.com.br",
+        "image": "/projects/peugeot.jpg"
+      },
+      {
+        "title": "CMS Migration to Sanity",
+        "description": "Full migration from Hygraph CMS to Sanity, including content restructuring and frontend refactoring in Next.js, focused on performance, scalability, and SEO.",
+        "previewLink": "https://www.tylermitchell.co/",
+        "image": "/projects/tyler-mitchel.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Feel free to reach out through any of the channels below. I'm available for new projects, partnerships, or just a chat about technology.",
+    "email": "murilo1258@hotmail.com",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }

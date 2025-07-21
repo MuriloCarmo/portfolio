@@ -6,7 +6,6 @@ import '@/styles/globals.css';
 function MyApp({Component, pageProps}: AppProps) {
     const {locale = 'pt'} = useRouter();
     const messages = pageProps.messages;
-    console.log('messages', messages);
 
     return (
         <IntlProvider locale={locale} messages={messages}>

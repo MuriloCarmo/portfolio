@@ -2,15 +2,32 @@ import {ProjectProps} from "@/types/project";
 
 export const projects:ProjectProps[] = [
     {
-        title: "Landing Pages - Grupo Stellantis",
+        title: "Landing Page – Jeep Renegade",
         description:
-            "Criação de diversas landing pages para modelos como Jeep Renegade, Fiat Titano, Ram Rampage e outros. Foco em SEO, performance, automação de deploys e rastreamento de métricas via DataLayer.",
-        stack: ["Next.js", "TypeScript", "Styled Components", "Sentry", "Vercel"],
-        image: "/projects/stellantis.jpg",
-        previewLink: "https://www.jeep.com.br/renegade",
+            "Criação de uma landing page altamente otimizada para o Jeep Renegade, priorizando SEO, responsividade e rastreamento via Google Tag Manager. O projeto utilizou componentes reutilizáveis e carregamento eficiente de mídias.",
+        stack: ["Next.js", "TypeScript", "Sass", "Sentry", "Vercel", "Node.js"],
+        image: "/projects/jeep-renegade.jpg",
+        previewLink: "https://www.jeep.com.br/renegade/"
+    },
+
+    {
+        title: "Landing Page – Jeep Compass",
+        description:
+            "Desenvolvimento da landing page oficial do Jeep Compass, com foco em performance, SEO e responsividade. Implementações incluem otimização de imagens, carregamento inteligente, código acessível e integração com métricas via Google Tag Manager (DataLayer).",
+        stack: ["Next.js", "TypeScript", "Sass", "Sentry", "Vercel", "Node.js"],
+        image: "/projects/jeep-compass.jpg",
+        previewLink: "https://www.jeep.com.br/compass/"
     },
     {
-        title: "Dashboard de Vendas e Financeiro",
+        title: "Landing Page – Fiat Titano",
+        description:
+            "Desenvolvimento da landing page oficial do modelo Fiat Titano, com foco em performance, responsividade e SEO. O projeto incluiu otimizações como lazy loading, compressão de imagens, estrutura semântica e implementação de DataLayer para análise de métricas via Google Tag Manager.",
+        stack: ["Next.js", "TypeScript", "Sass", "Sentry", "Vercel", "Node.js"],
+        image: "/projects/fiat-titano.jpg",
+        previewLink: "https://titano.fiat.com.br"
+    },
+    {
+        title: "Dashboard de Vendas e Financeiro (Preview Indisponível)",
         description:
             "Desenvolvimento completo de um painel administrativo para gestão de vendas, saques e antecipações. O projeto inclui autenticação com 2FA, filtros avançados, gráficos dinâmicos, relatórios financeiros e controle de permissões. Interface moderna e responsiva com foco em performance e experiência do usuário.",
         stack: [
@@ -56,7 +73,9 @@ export const projects:ProjectProps[] = [
             "Vercel",
             "Docker"
         ],
-        image: "/projects/tyler-mitchel.jpg", // Substitua por uma imagem representativa
+        image: "/projects/tyler-mitchel.jpg",
         previewLink: "https://www.tylermitchell.co/",
     },
+
+
 ];

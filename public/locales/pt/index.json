@@ -13,5 +13,102 @@
     "projects": "Projetos",
     "contact": "Contato",
     "whatsapp": "Fale comigo no WhatsApp"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor com 8 anos de experiência na criação de soluções digitais de alto impacto. Minha paixão é transformar ideias em interfaces modernas, intuitivas e funcionais que conectam pessoas e negócios.",
+    "experienceTitle": "Experiência Profissional",
+    "experience": [
+      {
+        "role": "Desenvolvedor - Sênior",
+        "company": "Work in Progress",
+        "location": "Remoto",
+        "type": "Full Time",
+        "period": "2025 – atual",
+        "description": "Responsável pela migração completa do CMS da plataforma Hygraph (GraphCMS) para o Sanity, reestruturando toda a arquitetura de conteúdo e refatorando o front-end em Next.js para garantir performance, escalabilidade e facilidade de manutenção."
+      },
+      {
+        "role": "Desenvolvedor Front-End - Sênior",
+        "company": "Digital Code By Dentsu",
+        "location": "Remoto",
+        "type": "Full Time",
+        "period": "2022 – 2024",
+        "description": "Desenvolvimento de soluções front-end para o Grupo Stellantis, com foco em criação de componentes otimizados e performáticos utilizando NextJS, SEO e DataLayer."
+      },
+      {
+        "role": "Desenvolvedor Front-End - Pleno",
+        "company": "Gesthor Hospitalar",
+        "location": "Goiânia, GO",
+        "type": "Full Time",
+        "period": "2021 – 2022",
+        "description": "Atuação como Full Stack, criando interfaces modernas em ReactJS com API NodeJS, Context API e Styled Components."
+      }
+    ],
+    "educationTitle": "Educação",
+    "education": {
+      "degree": "Análise e Desenvolvimento de Sistemas",
+      "institution": "Faculdade Estácio",
+      "location": "Goiânia, GO",
+      "type": "Presencial",
+      "period": "2019 – 2021"
+    },
+    "languagesTitle": "Idiomas",
+    "languages": [
+      "Português - Fluente",
+      "Inglês - Avançado",
+      "Espanhol - Intermediário"
+    ]
+  },
+  "techstack": {
+    "title": "Conjunto de Tecnologias",
+    "description": "Ferramentas que tenho utilizado com frequência"
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "items": [
+      {
+        "title": "Landing Page – Jeep Renegade",
+        "description": "Criação de uma landing page altamente otimizada para o Jeep Renegade, priorizando SEO, responsividade e rastreamento via Google Tag Manager. O projeto utilizou componentes reutilizáveis e carregamento eficiente de mídias.",
+        "previewLink": "https://www.jeep.com.br/renegade/",
+        "image": "/projects/jeep-renegade.jpg"
+      },
+      {
+        "title": "Landing Page – Jeep Compass",
+        "description": "Desenvolvimento da landing page oficial do Jeep Compass, com foco em performance, SEO e responsividade. Implementações incluem otimização de imagens, carregamento inteligente, código acessível e integração com métricas via Google Tag Manager (DataLayer).",
+        "previewLink": "https://www.jeep.com.br/compass/",
+        "image": "/projects/jeep-compass.jpg"
+      },
+      {
+        "title": "Landing Page – Fiat Titano",
+        "description": "Desenvolvimento da landing page oficial do modelo Fiat Titano, com foco em performance, responsividade e SEO. O projeto incluiu otimizações como lazy loading, compressão de imagens, estrutura semântica e implementação de DataLayer para análise de métricas via Google Tag Manager.",
+        "previewLink": "https://titano.fiat.com.br",
+        "image": "/projects/fiat-titano.jpg"
+      },
+      {
+        "title": "Dashboard de Vendas e Financeiro (Preview Indisponível)",
+        "description": "Desenvolvimento completo de um painel administrativo para gestão de vendas, saques e antecipações. O projeto inclui autenticação com 2FA, filtros avançados, gráficos dinâmicos, relatórios financeiros e controle de permissões. Interface moderna e responsiva com foco em performance e experiência do usuário.",
+        "image": "/projects/reflowapp.jpg"
+      },
+      {
+        "title": "CMS para Evento Peugeot Casacor",
+        "description": "Liderança no desenvolvimento de um CMS completo para evento da Peugeot. Construção de API robusta com autenticação, rotas protegidas, gerenciamento de conteúdos e upload de mídias.",
+        "previewLink": "https://carros.peugeot.com.br",
+        "image": "/projects/peugeot.jpg"
+      },
+      {
+        "title": "Migração de CMS para Sanity",
+        "description": "Migração completa do CMS Hygraph para Sanity, com reestruturação de conteúdo e refatoração do front-end em Next.js, focando em performance, escalabilidade e SEO.",
+        "previewLink": "https://www.tylermitchell.co/",
+        "image": "/projects/tyler-mitchel.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Fique à vontade para entrar em contato comigo pelos canais abaixo. Estou disponível para novos projetos, parcerias ou apenas bater um papo sobre tecnologia.",
+    "email": "murilo1258@hotmail.com",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }

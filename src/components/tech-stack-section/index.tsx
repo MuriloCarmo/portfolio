@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const techs = [
     { name: 'React', icon: '/icons/react.svg' },
@@ -16,15 +18,15 @@ const techs = [
 ];
 
 export default function TechStack() {
+    const t = useTranslations('techstack');
+
     return (
         <section
             id="techstack"
             className="pb-20 px-6 text-center md:flex md:flex-col md:justify-center"
         >
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">Conjunto de Tecnologias</h2>
-            <p className="text-muted-foreground mb-10">
-                Ferramentas que tenho utilizado com frequência
-            </p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">{t('title')}</h2>
+            <p className="text-muted-foreground mb-10">{t('description')}</p>
 
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-6 gap-y-8 justify-items-center">
                 {techs.map((tech) => (
