@@ -4,7 +4,8 @@
     "intro": "I’m",
     "description": "Web developer who turns ideas into fast, modern, and functional websites.",
     "experience": "With over 8 years of experience, I help companies and professionals launch their projects with quality, performance, and modern design.",
-    "cta": "Chat with me on WhatsApp"
+    "cta": "WhatsApp",
+    "projectsCta": "View Projects"
   },
   "navbar": {
     "home": "Home",
@@ -17,6 +18,11 @@
   "about": {
     "title": "About Me",
     "description": "Developer with 8 years of experience in building high-impact digital solutions. My passion is transforming ideas into modern, intuitive, and functional interfaces that connect people and businesses.",
+    "highlights": [
+      "8+ years shipping high-performance digital products with SEO best practices.",
+      "Strong front-end architecture work using Next.js and TypeScript at scale.",
+      "Product-focused delivery with clear communication from discovery to launch."
+    ],
     "experienceTitle": "Professional Experience",
     "experience": [
       {
@@ -65,6 +71,8 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "cta": "View project",
+    "unavailable": "Preview unavailable",
     "items": [
       {
         "title": "Landing Page – Jeep Renegade",

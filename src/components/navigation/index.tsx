@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
@@ -13,13 +13,16 @@ export default function Navbar() {
     const [activeSection, setActiveSection] = useState<string>('hero');
     const t = useTranslations('navbar');
 
-    const navigation = [
-        { name: t('home'), href: '#hero', id: 'hero' },
-        { name: t('about'), href: '#about', id: 'about' },
-        { name: t('techstack'), href: '#techstack', id: 'techstack' },
-        { name: t('projects'), href: '#projects', id: 'projects' },
-        { name: t('contact'), href: '#contact', id: 'contact' },
-    ];
+    const navigation = useMemo(
+        () => [
+            { name: t('home'), href: '#hero', id: 'hero' },
+            { name: t('about'), href: '#about', id: 'about' },
+            { name: t('techstack'), href: '#techstack', id: 'techstack' },
+            { name: t('projects'), href: '#projects', id: 'projects' },
+            { name: t('contact'), href: '#contact', id: 'contact' },
+        ],
+        [t]
+    );
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,22 +41,22 @@ export default function Navbar() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [navigation]);
 
     return (
-        <header className="fixed w-full z-50 bg-dark-background text-dark-foreground shadow-md px-6 md:px-16">
-            <div className="max-w-7xl mx-auto flex items-center justify-between py-6">
-                <div className="text-xl font-bold bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-transparent bg-clip-text">
+        <header className="fixed inset-x-0 top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-xl">
+            <div className="section-shell flex h-20 items-center justify-between">
+                <a href="#hero" className="font-display text-lg font-semibold tracking-tight text-foreground">
                     Murilo Carmo
-                </div>
+                </a>
 
-                <nav className="hidden md:flex items-center space-x-10">
+                <nav className="hidden items-center gap-8 md:flex">
                     {navigation.map((item) => (
                         <a
                             key={item.id}
                             href={item.href}
-                            className={`text-[1.05rem] font-medium transition ${
-                                activeSection === item.id ? 'text-primary' : 'hover:text-primary'
+                            className={`text-sm font-medium transition ${
+                                activeSection === item.id ? 'text-accent' : 'text-muted hover:text-foreground'
                             }`}
                         >
                             {item.name}
@@ -61,45 +64,55 @@ export default function Navbar() {
                     ))}
                 </nav>
 
-                <div className="hidden md:flex space-x-4">
-                    <a href="https://github.com/murilocarmo" target="_blank" rel="noopener noreferrer">
-                        <GithubIcon className="w-8 h-8 hover:text-primary transition"/>
+                <div className="hidden items-center gap-4 md:flex">
+                    <a href="https://github.com/murilocarmo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <GithubIcon className="h-5 w-5 text-muted transition hover:text-accent" />
                     </a>
-                    <a href="https://www.linkedin.com/in/murilo-henrique-a8a747110/" target="_blank"
-                       rel="noopener noreferrer">
-                        <LinkedinIcon className="w-8 h-8 hover:text-primary transition"/>
+                    <a
+                        href="https://www.linkedin.com/in/murilo-henrique-a8a747110/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <LinkedinIcon className="h-5 w-5 text-muted transition hover:text-accent" />
                     </a>
-                    <div className="flex justify-center items-center">
-                        <LanguageSwitcher/>
-                    </div>
+                    <LanguageSwitcher />
                 </div>
 
-                <button className="md:hidden" onClick={() => setIsOpen(true)}>
-                    <Menu size={24} />
+                <button
+                    className="inline-flex items-center justify-center rounded-lg border border-border bg-panel p-2 text-foreground md:hidden"
+                    onClick={() => setIsOpen(true)}
+                    aria-label="Open menu"
+                >
+                    <Menu size={20} />
                 </button>
             </div>
 
             {isOpen && (
                 <>
-                    <div className="fixed inset-0 bg-black/60 z-40" onClick={() => setIsOpen(false)} />
-                    <div className="fixed top-0 right-0 h-full w-full bg-dark-background text-dark-foreground z-50 shadow-lg flex flex-col">
-                        <div className="flex justify-between items-center px-6 py-6 border-b border-dark-foreground/20">
-                            <div className="text-xl font-bold bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-transparent bg-clip-text">
-                                Murilo Carmo
-                            </div>
-                            <button onClick={() => setIsOpen(false)}>
-                                <X size={24} />
+                    <div className="fixed inset-0 z-40 bg-black/65" onClick={() => setIsOpen(false)} />
+                    <div className="fixed right-0 top-0 z-50 flex h-full w-[88%] max-w-sm flex-col border-l border-border bg-background p-6 shadow-soft-lg">
+                        <div className="mb-8 flex items-center justify-between border-b border-border pb-5">
+                            <span className="font-display text-lg font-semibold tracking-tight">Murilo Carmo</span>
+                            <button
+                                onClick={() => setIsOpen(false)}
+                                className="rounded-lg border border-border bg-panel p-2"
+                                aria-label="Close menu"
+                            >
+                                <X size={18} />
                             </button>
                         </div>
 
-                        <nav className="flex flex-col px-6 pt-6 space-y-4">
+                        <nav className="flex flex-col gap-2">
                             {navigation.map((item) => (
                                 <a
                                     key={item.id}
                                     href={item.href}
                                     onClick={() => setIsOpen(false)}
-                                    className={`text-lg border-b border-dark-foreground/10 pb-2 min-h-[50px] flex items-center transition ${
-                                        activeSection === item.id ? 'text-primary' : 'hover:text-primary'
+                                    className={`rounded-lg px-3 py-3 text-sm font-medium transition ${
+                                        activeSection === item.id
+                                            ? 'bg-panelRaised text-accent'
+                                            : 'text-muted hover:bg-panel hover:text-foreground'
                                     }`}
                                 >
                                     {item.name}
@@ -107,19 +120,18 @@ export default function Navbar() {
                             ))}
                         </nav>
 
-                        <div className="mt-12 px-6 pb-6 space-y-4">
-                            <a
-                                href="https://wa.me/5562981641037"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-white font-medium py-3 rounded-md transition hover:brightness-110"
-                            >
-                                <Image src="/ui/whatsapp.svg" alt="WhatsApp" width={20} height={20}/>
-                                {t('whatsapp')}
-                            </a>
-                            <div className="flex justify-center gap-4 pt-4">
-                                <LanguageSwitcher/>
-                            </div>
+                        <a
+                            href="https://wa.me/5562981641037"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="button-primary mt-8 w-full gap-2"
+                        >
+                            <Image src="/ui/whatsapp.svg" alt="WhatsApp" width={18} height={18} />
+                            {t('whatsapp')}
+                        </a>
+
+                        <div className="mt-5 flex justify-center">
+                            <LanguageSwitcher />
                         </div>
                     </div>
                 </>

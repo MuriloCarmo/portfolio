@@ -24,68 +24,83 @@ export default function AboutSection() {
     };
 
     const languages = t.raw('languages') as string[];
+    const highlights = t.raw('highlights') as string[];
 
     return (
-        <section id="about" className="px-6 md:px-40 py-20">
-            <h2 className="text-4xl font-bold mb-6">{t('title')}</h2>
-            <p className="text-muted-foreground max-w-2xl mb-12">{t('description')}</p>
+        <section id="about" className="anchor-offset section-shell section-block">
+            <h2 className="section-title">{t('title')}</h2>
 
-            {/* EXPERIÊNCIA */}
-            <h3 className="text-3xl font-bold mb-6">{t('experienceTitle')}</h3>
-            <div className="space-y-8">
+            <div className="surface-card mt-8 p-5 md:p-6">
+                <p className="max-w-3xl text-base leading-7 text-muted">{t('description')}</p>
+                <ul className="mt-6 grid gap-3 md:grid-cols-2">
+                    {highlights.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm leading-6 text-muted">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                            <span>{item}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <h3 className="mt-14 text-2xl font-semibold tracking-tight md:text-3xl">{t('experienceTitle')}</h3>
+            <div className="mt-7 space-y-5 border-l border-border pl-6">
                 {experience.map((job, i) => (
-                    <div key={i} className="border-b border-gray-700 pb-4">
-                        <h4 className="text-lg font-medium">{job.role}</h4>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground mt-1">
-                            <div className="flex items-center gap-1">
-                                <Briefcase className="w-4 h-4" />
-                                {job.company}
+                    <article key={i} className="surface-card relative p-5 md:p-6">
+                        <span className="absolute -left-[31px] top-6 h-3 w-3 rounded-full border-2 border-accent bg-background" />
+                        <header className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <h4 className="text-lg font-semibold leading-snug text-foreground">{job.role}</h4>
+                                <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-muted">
+                                    <span className="flex items-center gap-1.5">
+                                        <Briefcase className="h-4 w-4" />
+                                        {job.company}
+                                    </span>
+                                    <span className="flex items-center gap-1.5">
+                                        <MapPin className="h-4 w-4" />
+                                        {job.location}
+                                    </span>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-1">
-                                <MapPin className="w-4 h-4" />
-                                {job.location}
-                            </div>
-                        </div>
-                        <div className="flex justify-between items-center mt-2 text-sm">
-                            <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">
-                                {job.type}
+                            <span className="pill w-fit">{job.type}</span>
+                        </header>
+                        <p className="mt-4 text-xs font-medium uppercase tracking-[0.12em] text-muted">{job.period}</p>
+                        <p className="mt-3 text-sm leading-6 text-muted">{job.description}</p>
+                    </article>
+                ))}
+            </div>
+
+            <h3 className="mt-14 text-2xl font-semibold tracking-tight md:text-3xl">{t('educationTitle')}</h3>
+            <article className="surface-card mt-7 p-5 md:p-6">
+                <header className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                        <h4 className="text-lg font-semibold leading-snug text-foreground">{education.degree}</h4>
+                        <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-muted">
+                            <span className="flex items-center gap-1.5">
+                                <Briefcase className="h-4 w-4" />
+                                {education.institution}
                             </span>
-                            <span>{job.period}</span>
+                            <span className="flex items-center gap-1.5">
+                                <MapPin className="h-4 w-4" />
+                                {education.location}
+                            </span>
                         </div>
-                        <p className="text-muted-foreground text-sm mt-2">{job.description}</p>
                     </div>
-                ))}
-            </div>
+                    <span className="pill w-fit">{education.type}</span>
+                </header>
+                <p className="mt-4 text-xs font-medium uppercase tracking-[0.12em] text-muted">{education.period}</p>
+            </article>
 
-            {/* EDUCAÇÃO */}
-            <h3 className="text-3xl font-bold mt-12 mb-6">{t('educationTitle')}</h3>
-            <div className="border-b border-gray-700 pb-4">
-                <h4 className="text-lg font-medium">{education.degree}</h4>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mt-1">
-                    <div className="flex items-center gap-1">
-                        <Briefcase className="w-4 h-4" />
-                        {education.institution}
-                    </div>
-                    <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {education.location}
-                    </div>
-                </div>
-                <div className="flex justify-between items-center mt-2 text-sm">
-                    <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">
-                        {education.type}
-                    </span>
-                    <span>{education.period}</span>
-                </div>
+            <h3 className="mt-14 text-2xl font-semibold tracking-tight md:text-3xl">{t('languagesTitle')}</h3>
+            <div className="surface-card mt-7 p-5 md:p-6">
+                <ul className="grid gap-3 text-sm leading-6 text-muted md:grid-cols-2">
+                    {languages.map((lang, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                            <span>{lang}</span>
+                        </li>
+                    ))}
+                </ul>
             </div>
-
-            {/* IDIOMAS */}
-            <h3 className="text-3xl font-bold mt-12 mb-6">{t('languagesTitle')}</h3>
-            <ul className="list-disc ml-6 text-muted-foreground">
-                {languages.map((lang, i) => (
-                    <li key={i}>{lang}</li>
-                ))}
-            </ul>
         </section>
     );
 }

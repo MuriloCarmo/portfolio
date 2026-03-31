@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <main className="flex flex-col bg-dark-background text-dark-foreground">
+            <main className="app-shell flex min-h-screen flex-col">
                 <HeroSection />
                 <AboutSection />
                 <TechStack />

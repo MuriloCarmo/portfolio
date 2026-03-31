@@ -4,7 +4,8 @@
     "intro": "eu sou",
     "description": "Desenvolvedor web que transforma ideias em sites rápidos, modernos e funcionais.",
     "experience": "Com mais de 8 anos de experiência, ajudo empresas e profissionais a lançarem seus projetos com qualidade, performance e design moderno.",
-    "cta": "Fale comigo no WhatsApp"
+    "cta": "WhatsApp",
+    "projectsCta": "Ver Projetos"
   },
   "navbar": {
     "home": "Home",
@@ -17,6 +18,11 @@
   "about": {
     "title": "Sobre Mim",
     "description": "Desenvolvedor com 8 anos de experiência na criação de soluções digitais de alto impacto. Minha paixão é transformar ideias em interfaces modernas, intuitivas e funcionais que conectam pessoas e negócios.",
+    "highlights": [
+      "8+ anos desenvolvendo produtos digitais focados em performance e SEO.",
+      "Experiência com arquitetura front-end escalavel em Next.js e TypeScript.",
+      "Atuação proxima ao negocio para transformar requisitos em interfaces objetivas."
+    ],
     "experienceTitle": "Experiência Profissional",
     "experience": [
       {
@@ -65,6 +71,8 @@
   },
   "projects": {
     "title": "Projetos em Destaque",
+    "cta": "Ver projeto",
+    "unavailable": "Preview indisponivel",
     "items": [
       {
         "title": "Landing Page – Jeep Renegade",

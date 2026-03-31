@@ -5,61 +5,51 @@ export default function HeroSection() {
     const t = useTranslations('hero');
 
     return (
-        <section id="hero" className="flex flex-col md:flex-row items-center justify-between px-6 md:px-40 py-20 md:py-32 gap-10">
-            <div className="text-center md:text-left max-w-xl md:max-w-2xl w-full">
-                <h1 className="text-[1.875rem] leading-tight md:text-[2.5rem] font-bold">
-                    {t('greeting')} 👋, {t('intro')}{" "}
-                    <span className="text-gradient bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-transparent bg-clip-text">
-                        Murilo Henrique
-                    </span>
-                    <br />
-                    {t('description')}
-                </h1>
+        <section id="hero" className="anchor-offset section-shell section-block pt-36 md:pt-44">
+            <div className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
+                <div className="text-center md:text-left">
+                    <h1 className="font-display text-4xl font-semibold tracking-tight leading-[1.06] sm:text-5xl lg:text-[56px] max-w-[18ch]">
+                        {t("greeting")} 👋, {t("intro")} Murilo Henrique.
+                        <span className="mt-3 block text-white/90">{t("description")}</span>
+                    </h1>
 
-                <div className="md:hidden my-10">
-                    <div className="relative w-36 h-36 mx-auto rounded-full p-[2px] bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd">
-                        <Image
-                            src="/me.jpeg"
-                            alt="Murilo Henrique"
-                            width={190}
-                            height={190}
-                            className="rounded-full shadow-lg object-cover w-full h-full"
-                            priority
-                        />
+                    <p className="mx-auto mt-7 max-w-[56ch] text-base leading-relaxed text-muted md:mx-0 md:text-lg">
+                        {t('experience')}
+                    </p>
+
+                    <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
+                        <a href="#projects" className="button-primary w-full sm:w-auto">
+                            {t('projectsCta')}
+                        </a>
+                        <a
+                            href="https://wa.me/5562981641037"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="button-secondary w-full gap-2 sm:w-auto"
+                        >
+                            <Image
+                                src="/ui/whatsapp.svg"
+                                alt="WhatsApp"
+                                width={18}
+                                height={18}
+                            />
+                            {t('cta')}
+                        </a>
                     </div>
                 </div>
 
-                <p className="text-gray-400 text-base md:text-lg">
-                    {t('experience')}
-                </p>
-
-                <div className="mt-8 flex justify-center md:justify-start">
-                    <a
-                        href="https://wa.me/5562981641037"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd text-white font-medium py-3 px-6 rounded-md transition hover:brightness-110"
-                    >
-                        <Image
-                            src="/ui/whatsapp.svg"
-                            alt="WhatsApp"
-                            width={24}
-                            height={24}
-                        />
-                        {t('cta')}
-                    </a>
-                </div>
-            </div>
-
-            <div className="hidden md:block relative w-36 h-36 md:w-52 md:h-52 shrink-0 rounded-full p-[3px] bg-gradient-to-r from-gradientStart via-gradientMid to-gradientEnd">
-                <div className="relative w-full h-full rounded-full overflow-hidden">
-                    <Image
-                        src="/me.jpeg"
-                        alt="Murilo Henrique"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
+                <div className="order-first md:order-last">
+                    <div className="surface-card mx-auto h-56 w-56 overflow-hidden rounded-[2rem] p-2 md:h-72 md:w-72">
+                        <div className="relative h-full w-full overflow-hidden rounded-[1.6rem]">
+                            <Image
+                                src="/me.jpeg"
+                                alt="Murilo Henrique"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

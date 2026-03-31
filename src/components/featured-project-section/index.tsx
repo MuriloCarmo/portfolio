@@ -1,57 +1,80 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { projects as projectData } from '@/data/project-data';
 
 export default function FeaturedProjectsSection() {
     const t = useTranslations('projects');
 
-    const projects = t.raw('items') as {
+    const translatedProjects = t.raw('items') as {
         title: string;
         description: string;
         previewLink?: string;
         image: string;
     }[];
 
-    return (
-        <section
-            id="projects"
-            className="flex flex-col px-[10%] py-[5%] text-left md:px-[10rem]"
-        >
-            <h1 className="text-3xl md:text-4xl font-bold mb-12">{t('title')}</h1>
+    const projects = translatedProjects.map((project, index) => {
+        const stack = projectData[index]?.stack;
+        const tags = Array.isArray(stack) ? stack.slice(0, 3) : stack ? [stack] : [];
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+        return {
+            ...project,
+            tags,
+        };
+    });
+
+    return (
+        <section id="projects" className="anchor-offset section-shell section-block">
+            <h2 className="section-title">{t('title')}</h2>
+
+            <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
                 {projects.map((project, index) => (
-                    <div key={index} className="text-left">
-                        <Link
-                            href={project.previewLink || "#"}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="block overflow-hidden rounded-md aspect-[16/9] transition-transform duration-200 hover:scale-105"
-                        >
+                    <article key={index} className="surface-card surface-card-hover group flex h-full flex-col overflow-hidden">
+                        <div className="relative aspect-video overflow-hidden border-b border-border">
+                            {project.previewLink ? (
+                                <Link href={project.previewLink} target="_blank" rel="noreferrer" className="absolute inset-0 z-10" aria-label={project.title} />
+                            ) : null}
                             <Image
                                 src={project.image}
                                 alt={project.title}
                                 width={640}
                                 height={360}
-                                className="w-full h-full object-cover"
+                                className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
                             />
-                        </Link>
+                        </div>
 
-                        <Link
-                            href={project.previewLink || "#"}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="block mt-4 text-lg font-semibold hover:underline transition-colors duration-150"
-                        >
-                            <h2 className="block my-6 font-semibold font-lato text-[1.75rem] hover:underline transition-colors duration-150">
+                        <div className="flex flex-1 flex-col p-5 md:p-6">
+                            <h3 className="text-xl font-semibold tracking-tight text-foreground md:text-2xl">
                                 {project.title}
-                            </h2>
-                        </Link>
+                            </h3>
+                            <p className="mt-3 text-sm leading-7 text-muted">
+                                {project.description}
+                            </p>
 
-                        <p className="mt-4 min-h-[80px] text-muted-foreground leading-[1.75rem]">
-                            {project.description}
-                        </p>
-                    </div>
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {project.tags.map((tag) => (
+                                    <span key={tag} className="pill">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-6">
+                                {project.previewLink ? (
+                                    <Link
+                                        href={project.previewLink}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="button-secondary"
+                                    >
+                                        {t('cta')}
+                                    </Link>
+                                ) : (
+                                    <span className="pill">{t('unavailable')}</span>
+                                )}
+                            </div>
+                        </div>
+                    </article>
                 ))}
             </div>
         </section>

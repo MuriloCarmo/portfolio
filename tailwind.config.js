@@ -10,19 +10,28 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['Lato', 'sans-serif'],
+        display: ['Montserrat', 'sans-serif'],
         lato: ['Lato', 'sans-serif'],
       },
       colors: {
-        background: '#ffffff',
-        foreground: '#0f0f0f',
-        primary: '#6366F1',
-        gradientStart: '#ec4899',
-        gradientMid: '#8b5cf6',
-        gradientEnd: '#06b6d4',
-        dark: {
-          background: '#0d0d0d',
-          foreground: '#f4f4f5',
-        },
+        background: 'rgb(var(--bg) / <alpha-value>)',
+        panel: 'rgb(var(--panel) / <alpha-value>)',
+        panelRaised: 'rgb(var(--panel-raised) / <alpha-value>)',
+        border: 'rgb(var(--border) / calc(var(--border-strength) * <alpha-value>))',
+        foreground: 'rgb(var(--text) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        accentStrong: 'rgb(var(--accent-strong) / <alpha-value>)',
+        primary: 'rgb(var(--accent) / <alpha-value>)',
+      },
+      boxShadow: {
+        soft: 'var(--shadow-soft)',
+        'soft-lg': 'var(--shadow-soft-lg)',
+      },
+      borderRadius: {
+        md: 'var(--radius-md)',
+        lg: 'var(--radius-lg)',
       },
     },
   },

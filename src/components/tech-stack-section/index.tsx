@@ -21,23 +21,25 @@ export default function TechStack() {
     const t = useTranslations('techstack');
 
     return (
-        <section
-            id="techstack"
-            className="pb-20 px-6 text-center md:flex md:flex-col md:justify-center"
-        >
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">{t('title')}</h2>
-            <p className="text-muted-foreground mb-10">{t('description')}</p>
+        <section id="techstack" className="anchor-offset section-shell section-block text-center">
+            <h2 className="section-title">{t('title')}</h2>
+            <p className="section-subtitle mx-auto">{t('description')}</p>
 
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-6 gap-y-8 justify-items-center">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
                 {techs.map((tech) => (
-                    <div key={tech.name} title={tech.name} className="w-16 h-16 md:w-20 md:h-20">
+                    <div
+                        key={tech.name}
+                        title={tech.name}
+                        className="flex items-center justify-center gap-2 rounded-full border border-border bg-panel px-3 py-2"
+                    >
                         <Image
                             src={tech.icon}
                             alt={tech.name}
-                            width={80}
-                            height={80}
-                            className="object-contain w-full h-full"
+                            width={18}
+                            height={18}
+                            className="h-[18px] w-[18px] object-contain"
                         />
+                        <span className="text-xs font-medium text-muted">{tech.name}</span>
                     </div>
                 ))}
             </div>
