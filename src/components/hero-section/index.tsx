@@ -3,23 +3,31 @@ import Image from 'next/image';
 
 export default function HeroSection() {
     const t = useTranslations('hero');
+    const highlights = t.raw('highlights') as string[];
 
     return (
         <section id="hero" className="anchor-offset section-shell section-block pt-36 md:pt-44">
             <div className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
                 <div className="text-center md:text-left">
-                    <h1 className="font-display text-4xl font-semibold tracking-tight leading-[1.06] sm:text-5xl lg:text-[56px] max-w-[18ch]">
-                        {t("greeting")} 👋, {t("intro")} Murilo Henrique.
-                        <span className="mt-3 block text-white/90">{t("description")}</span>
+                    <h1 className="font-display max-w-[18ch] text-4xl font-semibold leading-[1.06] tracking-tight sm:text-5xl lg:text-[56px]">
+                        {t('headline')}
                     </h1>
 
                     <p className="mx-auto mt-7 max-w-[56ch] text-base leading-relaxed text-muted md:mx-0 md:text-lg">
-                        {t('experience')}
+                        {t('subtitle')}
                     </p>
 
+                    <div className="mt-6 flex flex-wrap items-center justify-center gap-2 md:justify-start">
+                        {highlights.map((item) => (
+                            <span key={item} className="pill">
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+
                     <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
-                        <a href="#projects" className="button-primary w-full sm:w-auto">
-                            {t('projectsCta')}
+                        <a href="/cv/cv_murilo_pt_br.docx" download className="button-primary w-full sm:w-auto">
+                            {t('primaryCta')}
                         </a>
                         <a
                             href="https://wa.me/5562981641037"
@@ -33,7 +41,7 @@ export default function HeroSection() {
                                 width={18}
                                 height={18}
                             />
-                            {t('cta')}
+                            {t('secondaryCta')}
                         </a>
                     </div>
                 </div>

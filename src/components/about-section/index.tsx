@@ -12,7 +12,7 @@ export default function AboutSection() {
         location: string;
         type: string;
         period: string;
-        description: string;
+        bullets: string[];
     }>;
 
     const education = t.raw('education') as {
@@ -64,7 +64,14 @@ export default function AboutSection() {
                             <span className="pill w-fit">{job.type}</span>
                         </header>
                         <p className="mt-4 text-xs font-medium uppercase tracking-[0.12em] text-muted">{job.period}</p>
-                        <p className="mt-3 text-sm leading-6 text-muted">{job.description}</p>
+                        <ul className="mt-3 space-y-2">
+                            {job.bullets.map((bullet, bulletIndex) => (
+                                <li key={bulletIndex} className="flex items-start gap-2 text-sm leading-6 text-muted">
+                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                                    <span>{bullet}</span>
+                                </li>
+                            ))}
+                        </ul>
                     </article>
                 ))}
             </div>

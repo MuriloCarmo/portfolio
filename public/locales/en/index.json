@@ -1,11 +1,14 @@
 {
   "hero": {
-    "greeting": "Hello",
-    "intro": "I’m",
-    "description": "Web developer who turns ideas into fast, modern, and functional websites.",
-    "experience": "With over 8 years of experience, I help companies and professionals launch their projects with quality, performance, and modern design.",
-    "cta": "WhatsApp",
-    "projectsCta": "View Projects"
+    "headline": "Senior React and Next.js engineer focused on performance, SEO and production delivery.",
+    "subtitle": "Hands-on with TypeScript, Node.js/NestJS and Flutter, with experience in dashboards, CMS, DataLayer/GTM and Core Web Vitals/Lighthouse optimization.",
+    "primaryCta": "Download CV",
+    "secondaryCta": "Talk on WhatsApp",
+    "highlights": [
+      "8+ years of experience",
+      "Up to 200k visits/month",
+      "Lighthouse 90-100 on launches"
+    ]
   },
   "navbar": {
     "home": "Home",
@@ -16,38 +19,62 @@
     "whatsapp": "Chat with me on WhatsApp"
   },
   "about": {
-    "title": "About Me",
-    "description": "Developer with 8 years of experience in building high-impact digital solutions. My passion is transforming ideas into modern, intuitive, and functional interfaces that connect people and businesses.",
+    "title": "Experience and Impact",
+    "description": "Professional with 8 years of front-end and full-stack experience, focused on high-performance digital products, technical SEO and reliable production delivery.",
     "highlights": [
-      "8+ years shipping high-performance digital products with SEO best practices.",
-      "Strong front-end architecture work using Next.js and TypeScript at scale.",
-      "Product-focused delivery with clear communication from discovery to launch."
+      "Stellantis landing pages delivered with scale, performance and SEO focus.",
+      "Full CMS migration from Hygraph to Sanity with zero downtime.",
+      "Full-stack experience across Flutter, Next.js, Node.js and NestJS."
     ],
     "experienceTitle": "Professional Experience",
     "experience": [
       {
-        "role": "Senior Developer",
-        "company": "Work in Progress",
+        "role": "Technical Consultant / Senior Front-End Developer",
+        "company": "IEL",
         "location": "Remote",
-        "type": "Full Time",
-        "period": "2025 – Present",
-        "description": "Responsible for the complete migration of the CMS from the Hygraph (GraphCMS) platform to Sanity, restructuring the entire content architecture and refactoring the front-end in Next.js to ensure performance, scalability, and ease of maintenance."
+        "type": "Consulting",
+        "period": "2024 – Present",
+        "bullets": [
+          "Delivered an administrative module in Next.js with corporate authentication via AWS Cognito.",
+          "Integrated with Java/Spring Boot APIs for user, permission and role validation.",
+          "Structured AuthContext and admin flows to reduce production access issues."
+        ]
       },
       {
-        "role": "Senior Front-End Developer",
-        "company": "Digital Code By Dentsu",
+        "role": "Full Stack Developer",
+        "company": "UniOdonto",
+        "location": "Remote",
+        "type": "Full Time",
+        "period": "2026 – Present",
+        "bullets": [
+          "Delivered web and mobile flows with Flutter and Next.js for auth, patients and appointments.",
+          "Evolved Node.js APIs and standardized payloads across teams.",
+          "Improved architecture to scale clinical and administrative modules."
+        ]
+      },
+      {
+        "role": "Front-End Developer",
+        "company": "Digital Code by Dentsu (Stellantis)",
         "location": "Remote",
         "type": "Full Time",
         "period": "2022 – 2024",
-        "description": "Development of front-end solutions for the Stellantis Group, focusing on optimized and high-performance components using NextJS, SEO, and DataLayer."
+        "bullets": [
+          "Built landing pages for Jeep and Fiat brands using Next.js and TypeScript.",
+          "Delivered pages focused on Core Web Vitals, technical SEO and DataLayer/GTM.",
+          "Supported high-traffic production launches with CI/CD and monitoring."
+        ]
       },
       {
-        "role": "Mid-Level Front-End Developer",
-        "company": "Gesthor Hospitalar",
-        "location": "Goiânia, GO",
-        "type": "Full Time",
-        "period": "2021 – 2022",
-        "description": "Worked as a Full Stack developer, creating modern interfaces in ReactJS with NodeJS API, Context API, and Styled Components."
+        "role": "Senior Front-End / Full Stack Developer",
+        "company": "Freelancer",
+        "location": "Remote",
+        "type": "Freelance",
+        "period": "2024 – Present",
+        "bullets": [
+          "Led a full Hygraph-to-Sanity CMS migration while preserving SEO and availability.",
+          "Built dashboards and admin modules focused on data clarity and performance.",
+          "Provided technical consulting on Next.js, Tailwind, performance and integrations."
+        ]
       }
     ],
     "educationTitle": "Education",
@@ -55,7 +82,7 @@
       "degree": "Systems Analysis and Development",
       "institution": "Estácio University",
       "location": "Goiânia, GO",
-      "type": "In-person",
+      "type": "Bachelor Degree",
       "period": "2019 – 2021"
     },
     "languagesTitle": "Languages",
@@ -66,8 +93,46 @@
     ]
   },
   "techstack": {
-    "title": "Tech Stack",
-    "description": "Tools I’ve been using frequently"
+    "title": "Core Stack",
+    "description": "Quick snapshot of the technologies and competencies most relevant for production projects.",
+    "groups": [
+      {
+        "title": "Front-end",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind"
+        ]
+      },
+      {
+        "title": "Back-end",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "REST APIs",
+          "Prisma",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "title": "Performance and SEO",
+        "items": [
+          "Core Web Vitals",
+          "Lighthouse",
+          "Technical SEO",
+          "DataLayer",
+          "GTM"
+        ]
+      },
+      {
+        "title": "Mobile",
+        "items": [
+          "Flutter",
+          "Dart"
+        ]
+      }
+    ]
   },
   "projects": {
     "title": "Featured Projects",
@@ -113,7 +178,7 @@
   },
   "contact": {
     "title": "Get in Touch",
-    "description": "Feel free to reach out through any of the channels below. I'm available for new projects, partnerships, or just a chat about technology.",
+    "description": "Available for PJ contracts, based in Goiania-GO (remote/hybrid), with fast onboarding.",
     "email": "murilo1258@hotmail.com",
     "whatsapp": "WhatsApp",
     "linkedin": "LinkedIn",
